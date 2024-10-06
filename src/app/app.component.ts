@@ -10,4 +10,6 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'miprimeraApp';
+
+  saludo = 'Hola alumnos de Angular. Que tal estais?';
 }
