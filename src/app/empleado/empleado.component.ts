@@ -5,8 +5,10 @@ import { RouterOutlet } from '@angular/router';
   selector: 'app-empleado',
   standalone: true,
   imports: [RouterOutlet],
-  templateUrl: './empleado.component.html',
-  styleUrl: './empleado.component.css'
+  //templateUrl: './empleado.component.html',
+  template:"<p>aquí iría un empleado</p>",
+  //styleUrl: './empleado.component.css'
+  styles:["p{background-color: blueviolet;}"]//le meto el css o html directamente
 })
 export class EmpleadoComponent {
 
