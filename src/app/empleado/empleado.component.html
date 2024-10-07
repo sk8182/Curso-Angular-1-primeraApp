@@ -8,8 +8,14 @@
 
 <p>Empresa del empleado: {{empresa.value}}</p>
 
-Introduce la empresa: <input type="text" #empresa (keyup)="0"><!--para identificar un elemento del DOM #-->
+Introduce la empresa: <input type="text" #empresa [disabled]="habilitacionCuadro"><!--para identificar un elemento del DOM #-->
 <br/>
 <br/>
 
-<!--<input type="button" value ="Dale!" (click)="llamaEmpresa(empresa.value)"/>hay que crear el evento al hacer click en el botón-->
+<input type="button" value ="Dale!" (click)="llamaEmpresa(empresa.value)"/><!--hay que crear el evento al hacer click en el botón-->
+
+<br/>
+<br/>
+Registrado: <input type="checkbox" id="registro" [checked]="usuRegistrado"/>
+
+{{getRegistroUsuario()}}

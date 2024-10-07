@@ -16,12 +16,27 @@ export class EmpleadoComponent {
   private edad=8;//si modifico y pongo un private necesitaré un getter para acceder
   //empresa="Píldoras Informaticas";
 
+  habilitacionCuadro = true;
+
+  usuRegistrado = false;
+
+  getRegistroUsuario(){
+
+    this.usuRegistrado=true;
+
+  }
+
+
+
+
   getEdad(){
     return this.edad;
   }
 
   llamaEmpresa(value:String){
-    
+
   }
+
+
 
 }
