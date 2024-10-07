@@ -14,10 +14,14 @@ export class EmpleadoComponent {
   nombre= "Juan";
   apellido="Díaz";
   private edad=8;//si modifico y pongo un private necesitaré un getter para acceder
-  empresa="Píldoras Informaticas";
+  //empresa="Píldoras Informaticas";
 
   getEdad(){
     return this.edad;
+  }
+
+  llamaEmpresa(value:String){
+    
   }
 
 }
