@@ -20,14 +20,13 @@ export class EmpleadoComponent {
 
   usuRegistrado = false;
 
+  textoDeRegistro ="No hay nadie registrado";
+
   getRegistroUsuario(){
 
-    this.usuRegistrado=true;
+    this.usuRegistrado=false;
 
   }
-
-
-
 
   getEdad(){
     return this.edad;
@@ -36,6 +35,21 @@ export class EmpleadoComponent {
   llamaEmpresa(value:String){
 
   }
+
+setUsuarioRegistrado(event:Event){
+
+  //alert("El susuario se acaba de registrar");
+  //this.textoDeRegistro="El usuario se acaba de registrar";
+
+  if((<HTMLInputElement>event.target).value =="si"){//casteo el event a HTMLInputElement para extraer el value
+    this.textoDeRegistro="El usuario se acaba de resgistrar";
+  }else{
+    this.textoDeRegistro ="No hay nadie registrado";
+  }
+
+}
+
+
 
 
 
