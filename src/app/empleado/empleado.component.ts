@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { FormsModule } from '@angular/forms'; // Importas FormsModule para ngModel
 
 @Component({
   selector: 'app-empleado',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet,FormsModule],
   templateUrl: './empleado.component.html',
   styleUrl: './empleado.component.css'
  
@@ -13,8 +14,11 @@ export class EmpleadoComponent {
 
   nombre= "Juan";
   apellido="Díaz";
-  private edad=8;//si modifico y pongo un private necesitaré un getter para acceder
-  //empresa="Píldoras Informaticas";
+  edad=8;//si modifico y pongo un private necesitaré un getter para acceder
+  empresa="Google";
+
+
+  
 
   habilitacionCuadro = true;
 
@@ -28,9 +32,9 @@ export class EmpleadoComponent {
 
   }
 
-  getEdad(){
-    return this.edad;
-  }
+  // getEdad(){
+  //   return this.edad;
+  // }
 
   llamaEmpresa(value:String){
 

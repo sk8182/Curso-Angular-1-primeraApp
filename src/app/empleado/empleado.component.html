@@ -2,18 +2,19 @@
 
 <p>Apellido del empleado: {{apellido}}</p>
 
-<p>Edad del empleado: {{getEdad()}}</p><!--haciendo uso del get xq el campo es privado-->
+<p>Edad del empleado: {{edad}}</p><!--haciendo uso del get xq el campo es privado-->
 
-<p>Edad del empleado: {{getEdad()<18 ? "Menor de edad":"Mayor de edad"}}</p><!--operador ternario   <condición> ? <en caso de ser true>:<en caso de ser false>-->
+<p>Edad del empleado: {{edad<18 ? "Menor de edad":"Mayor de edad"}}</p><!--operador ternario   <condición> ? <en caso de ser true>:<en caso de ser false>-->
 
-<p>Empresa del empleado: {{empresa.value}}</p>
+<p>Empresa del empleado: {{empresa}}</p>
 
-Introduce la empresa: <input type="text" #empresa [disabled]="habilitacionCuadro"><!--para identificar un elemento del DOM #-->
+<!-- Introduce la empresa: <input type="text" #empresa [disabled]="habilitacionCuadro">para identificar un elemento del DOM #
 <br/>
 <br/>
 
-<input type="button" value ="Dale!" (click)="llamaEmpresa(empresa.value)"/><!--hay que crear el evento al hacer click en el botón-->
+<input type="button" value ="Dale!" (click)="llamaEmpresa(empresa.value)"/>hay que crear el evento al hacer click en el botón-->
 
+Introduce la empresa: <input type="text" [(ngModel)]="empresa"><!--con esto, esa propiedad es bidireccional, antes hay que importar FormsModule-->
 <br/>
 <br/>
 {{textoDeRegistro}}

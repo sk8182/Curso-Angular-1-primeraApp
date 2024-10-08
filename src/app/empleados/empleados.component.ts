@@ -2,6 +2,7 @@ import { Component } from "@angular/core";
 import { RouterOutlet } from '@angular/router';
 import { EmpleadoComponent } from '../empleado/empleado.component';
 
+
 @Component({
 
     selector:"app-empleados",
